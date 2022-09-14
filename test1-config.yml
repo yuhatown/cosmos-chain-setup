@@ -1,0 +1,43 @@
+# Point
+## Total coin = (accounts_coins + validator_staked) + (test2) + ... + (testn)
+
+accounts:
+  - name: test1
+    coins: ["200000000udico"] # Number of coins to be generated in test1
+    mnemonic: "salute slide lawn loan three later accuse wage risk tired frown total reduce license art joke lawn outside critic doctor track fashion curious science" # change it
+
+validator:
+  name: test1
+  staked: "100000000udico" # Number of coins to be generated in test1
+
+client:
+  openapi:
+    path: "docs/static/openapi.yml"
+  vuex:
+    path: "vue/src/store"
+
+faucet:
+  name: test1
+  coins: ["100000udico"]
+
+init:
+  app:
+    minimum-gas-prices: "0.1udico"
+
+genesis:
+  chain_id: "discovery"
+  app_state:
+    staking:
+      params:
+        bond_denom: "udico"
+    mint:
+      params:
+        mint_denom: "udico"
+    crisis:
+      constant_fee:
+        denom: "udico"
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "10000000"
+            denom: "udico"

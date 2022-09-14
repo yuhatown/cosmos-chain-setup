@@ -1,0 +1,43 @@
+# Point
+## change mnemonic
+
+accounts:
+  - name: test4
+    coins: ["200000000udico"]
+    mnemonic: "table actress such extra until thought leader tackle aisle cabin ship eye cigar popular outer float welcome glory caution dinner south athlete panda slot" # change it
+
+validator:
+  name: test4
+  staked: "100000000udico"
+
+client:
+  openapi:
+    path: "docs/static/openapi.yml"
+  vuex:
+    path: "vue/src/store"
+
+faucet:
+  name: test4
+  coins: ["100000udico"]
+
+init:
+  app:
+    minimum-gas-prices: "0.1udico"
+
+genesis:
+  chain_id: "discovery"
+  app_state:
+    staking:
+      params:
+        bond_denom: "udico"
+    mint:
+      params:
+        mint_denom: "udico"
+    crisis:
+      constant_fee:
+        denom: "udico"
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "10000000"
+            denom: "udico"

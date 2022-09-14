@@ -1,0 +1,43 @@
+# Point
+## change mnemonic
+
+accounts:
+  - name: test2
+    coins: ["200000000udico"]
+    mnemonic: "regular birth fish stage program whip critic timber moral ensure exercise cup immune object paddle youth chaos bamboo rent during alien license rebel author"
+
+validator:
+  name: test2
+  staked: "100000000udico"
+
+client:
+  openapi:
+    path: "docs/static/openapi.yml"
+  vuex:
+    path: "vue/src/store"
+
+faucet:
+  name: test2
+  coins: ["100000udico"]
+
+init:
+  app:
+    minimum-gas-prices: "0.1udico"
+
+genesis:
+  chain_id: "discovery"
+  app_state:
+    staking:
+      params:
+        bond_denom: "udico"
+    mint:
+      params:
+        mint_denom: "udico"
+    crisis:
+      constant_fee:
+        denom: "udico"
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "10000000"
+            denom: "udico"

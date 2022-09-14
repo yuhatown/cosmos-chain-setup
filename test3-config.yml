@@ -1,0 +1,43 @@
+# Point
+## change mnemonic
+
+accounts:
+  - name: test3
+    coins: ["200000000udico"]
+    mnemonic: "crowd breeze book predict this pair force second plunge dilemma almost bubble math similar area wood dice discover insane charge garage ghost chicken castle" # change it
+
+validator:
+  name: test3
+  staked: "100000000udico"
+
+client:
+  openapi:
+    path: "docs/static/openapi.yml"
+  vuex:
+    path: "vue/src/store"
+
+faucet:
+  name: test3
+  coins: ["100000udico"]
+
+init:
+  app:
+    minimum-gas-prices: "0.1udico"
+
+genesis:
+  chain_id: "discovery"
+  app_state:
+    staking:
+      params:
+        bond_denom: "udico"
+    mint:
+      params:
+        mint_denom: "udico"
+    crisis:
+      constant_fee:
+        denom: "udico"
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "10000000"
+            denom: "udico"
